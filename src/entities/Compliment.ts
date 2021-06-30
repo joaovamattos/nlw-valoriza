@@ -19,14 +19,14 @@ class Compliment {
   @Column()
   user_sender: string;
 
-  @JoinColumn({ name: "id" })
+  @JoinColumn({ name: "user_sender" })
   @ManyToOne(() => User)
-  userSeceiver: User;
+  userSender: User;
 
   @Column()
   user_receiver: string;
 
-  @JoinColumn({ name: "id" })
+  @JoinColumn({ name: "user_receiver" })
   @ManyToOne(() => User)
   userReceiver: User;
 
